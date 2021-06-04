@@ -80,30 +80,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *               `----------------------------------'  `----------------------------------'
  */
     [_WASD] = LAYOUT(
-      XXXXXXX,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    XXXXXXX,
-      XXXXXXX,   KC_A,  SFT_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, XXXXXXX,
-      XXXXXXX,   KC_Z,   KC_X,   KC_C,  ALT_V,   KC_B, KC_MINS, KC_LSFT, KC_LSFT, KC_QUOT,    KC_N,   ALT_M, KC_COMM,  KC_DOT,  KC_SLSH, XXXXXXX,
-                              XXXXXXX, KC_DEL, KC_TAB, LWR_ESC, KC_BSPC,  KC_SPC, RSE_ENT, KC_PIPE,  KC_BSPC, XXXXXXX
+      XXXXXXX,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                        KC_Y,    KC_U,    KC_I,    KC_O,     KC_P, XXXXXXX,
+      XXXXXXX,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                        KC_H,    KC_J,    KC_K,    KC_L,  KC_SCLN, XXXXXXX,
+      XXXXXXX,   KC_Z,   KC_X,   KC_C,   KC_V,   KC_B, KC_MINS, KC_LSFT, KC_LSFT, KC_QUOT,    KC_N,    KC_M, KC_COMM,  KC_DOT,  KC_SLSH, XXXXXXX,
+                              XXXXXXX, KC_DEL, KC_TAB, LWR_ESC, KC_BSPC,  KC_SPC, RSE_ENT, KC_PIPE, KC_BSPC, XXXXXXX
     ),
 /*
  * Lower Layer: Symbols
  *
- * ,-------------------------------------------.                              ,-------------------------------------------.
- * |        |  !   |  @   |  {   |  }   |  |   |                              |      |      |      |      |      |  | \   |
- * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
- * |        |  #   |  $   |  (   |  )   |  `   |                              |   +  |  -   |  /   |  *   |  %   |  ' "   |
- * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * |        |  %   |  ^   |  [   |  ]   |  ~   |      |      |  |      |      |   &  |  =   |  ,   |  .   |  / ? | - _    |
- * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        |      |      |      |  ;   |  =   |  |  =   |  ;   |      |      |      |
- *                        |      |      |      |      |      |  |      |      |      |      |      |
- *                        `----------------------------------'  `----------------------------------'
+ * ,-----------------------------------------.                              ,-----------------------------------------.
+ * |      |   1  |   2  |   3  |   4  |   5  |                              |   6  |   7  |   8  |   9  |   0  |      |
+ * |------+------+------+------+------+------|                              |------+------+------+------+------+------|
+ * |      |   !  |   @  |   #  |   $  |   %  |                              |   ^  |   &  |   *  |   (  |   )  |      |
+ * |------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+------|
+ * |      |   =  |   -  |   +  |   {  |   }  |      |      |  |      |      |   [  |   ]  |   ;  |   :  |   \  |      |
+ * `--------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
+ *                      |      |      |      |      |      |  |      |      |      |      |      |
+ *                      |      |      |      |      |      |  |      |      |      |      |      |
+ *                       `----------------------------------'  `----------------------------------'
  */
     [_LOWER] = LAYOUT(
-      _______, KC_EXLM, KC_AT,   KC_LCBR, KC_RCBR, KC_PIPE,                                     _______, _______, _______, _______, _______, KC_BSLS,
-      _______, KC_HASH, KC_DLR,  KC_LPRN, KC_RPRN, KC_GRV,                                      KC_PLUS, KC_MINS, KC_SLSH, KC_ASTR, KC_PERC, KC_QUOT,
-      _______, KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_TILD, _______, _______, _______, _______, KC_AMPR, KC_EQL,  KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-                                 _______, _______, _______, KC_SCLN, KC_EQL,  KC_EQL,  KC_SCLN, _______, _______, _______
+      _______,    KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                                        KC_6,   KC_7,    KC_8,    KC_9,    KC_0,  _______, \
+      _______, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                                     KC_CIRC,KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN,  _______, \
+      _______,  KC_EQL, KC_MINS, KC_PLUS, KC_LCBR, KC_RCBR, _______, _______, _______, _______, KC_LBRC,KC_RBRC, KC_SCLN, KC_COLN, KC_BSLS,  _______, \
+                                 _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 /*
  * Raise Layer: Number keys, media, navigation
