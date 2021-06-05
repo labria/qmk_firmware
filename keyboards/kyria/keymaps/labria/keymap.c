@@ -45,27 +45,19 @@ enum layers {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-/*
- * Base Layer: QWERTY
- *
- * ,----------------------------------.                              ,----------------------------------.
- * |   Q  |   W  |   E  |   R  |   T  |                              |   Y  |   U  |   I  |   O  |   P  |
- * |------+------+------+------+------|                              |------+------+------+------+------|
- * |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |
- * |------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------|
- * |   Z  |   X  |   C  |   V  |   B  |  - _ |LShift|  |LShift|  ' " |   N  |   M  | ,  < | . >  | /  ? |
- * `-------------+------+------+------+------+------|  |------+------+------+------+------+-------------'
- *               |  ()  | Del  | Tab  | Esc  | Bscp |  | Space| Enter|   |  | Bksp |  ()  |
- *               |      |      |      | Lower|      |  |      | Raise|      |      |      |
- *               `----------------------------------'  `----------------------------------'
- */
-    [_QWERTY] = LAYOUT(
-      XXXXXXX,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                        KC_Y,    KC_U,    KC_I,    KC_O,     KC_P, XXXXXXX,
-      XXXXXXX,   KC_A,  SFT_S,  CTL_D,  CMD_F,   KC_G,                                        KC_H,   CMD_J,   CTL_K,   SFT_L,  KC_SCLN, XXXXXXX,
-      XXXXXXX,   KC_Z,   KC_X,   KC_C,  ALT_V,   KC_B, KC_MINS, KC_LSFT, KC_LSFT, KC_QUOT,    KC_N,   ALT_M, KC_COMM,  KC_DOT,  KC_SLSH, XXXXXXX,
-                              XXXXXXX, KC_DEL, KC_TAB, LWR_ESC, KC_BSPC,  KC_SPC, RSE_ENT, KC_PIPE,  KC_BSPC, XXXXXXX
+
+    [_QWERTY] = LAYOUT_split_3x5_6(
+// ┌────────┬────────┬────────┬────────┬────────┐                                     ┌────────┬────────┬────────┬────────┬────────┐    
+       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                                          KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
+// ├────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┤  
+       KC_A,   SFT_S,   CTL_D,   CMD_F,    KC_G,                                          KC_H,   CMD_J,   CTL_K,   SFT_L, KC_SCLN,
+// ├────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┤ 
+       KC_Z,    KC_X,    KC_C,   ALT_V,    KC_B, KC_MINS, KC_LSFT,   KC_LSFT, KC_QUOT,    KC_N,   ALT_M, KC_COMM,  KC_DOT, KC_SLSH,
+// └────────┴────────┴────────┼────────┼────────┼────────┬────────┤ ├────────┬────────┼────────┼────────┼────────┴────────┴────────┘ 
+                      /* () */  KC_DEL,  KC_TAB, LWR_ESC, KC_BSPC,    KC_SPC, RSE_ENT, KC_PIPE, KC_BSPC  /* () */
+//                            └────────┴────────┴────────┴────────┘ └────────┴────────┴────────┴────────┘
     ),
- /*
+/*
  * Game Layer: WASD
  *
  * ,----------------------------------.                              ,----------------------------------.
