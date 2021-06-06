@@ -42,7 +42,7 @@
     { R45,   R46,   R47,   R48,   R49,   KC_NO, KC_NO, KC_NO }, \
 }
 // 6 buttons in thumb cluster, 2 rotary encoders
-#define LAYOUT_split_3x5_7( \
+#define LAYOUT_split_3x5_6( \
     L01, L02, L03, L04, L05,                     R06, R07, R08, R09, R10, \
     L13, L14, L15, L16, L17,                     R18, R19, R20, R21, R22, \
     L25, L26, L27, L28, L29, L30, L31, R32, R33, R34, R35, R36, R37, R38, \
