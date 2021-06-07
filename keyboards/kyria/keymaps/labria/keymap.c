@@ -25,8 +25,8 @@
 #define CMD_F   LCMD_T(KC_F)
 #define CMD_J   RCMD_T(KC_J)
 
-#define ALT_V   LALT_T(KC_V)
-#define ALT_M   RALT_T(KC_M)
+#define OPT_V   LOPT_T(KC_V)
+#define OPT_M   ROPT_T(KC_M)
 
 #define LWR_ESC LT(_LOWER, KC_ESC)
 #define RSE_ENT LT(_RAISE, KC_ENT)
@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // ├────────┼────────┼────────┼────────┼────────┤                                     ├────────┼────────┼────────┼────────┼────────┤
        KC_A,   SFT_S,   CTL_D,   CMD_F,    KC_G,                                          KC_H,   CMD_J,   CTL_K,   SFT_L, KC_SCLN,
 // ├────────┼────────┼────────┼────────┼────────┼────────┬────────┐ ┌────────┬────────┼────────┼────────┼────────┼────────┼────────┤
-       KC_Z,    KC_X,    KC_C,   ALT_V,    KC_B, KC_MINS, KC_LSFT,   KC_LSFT, KC_QUOT,    KC_N,   ALT_M, KC_COMM,  KC_DOT, KC_SLSH,
+       KC_Z,    KC_X,    KC_C,   OPT_V,    KC_B, KC_MINS, KC_LSFT,   KC_LSFT, KC_QUOT,    KC_N,   OPT_M, KC_COMM,  KC_DOT, KC_SLSH,
 // └────────┴────────┴────────┼────────┼────────┼────────┬────────┤ ├────────┬────────┼────────┼────────┼────────┴────────┴────────┘
                       /* () */  KC_DEL,  KC_TAB, LWR_ESC, KC_BSPC,    KC_SPC, RSE_ENT, KC_PIPE, KC_BSPC  /* () */
 //                            └────────┴────────┴────────┴────────┘ └────────┴────────┴────────┴────────┘
