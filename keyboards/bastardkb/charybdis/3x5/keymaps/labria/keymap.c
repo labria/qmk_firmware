@@ -90,11 +90,6 @@ static uint16_t auto_pointer_layer_timer = 0;
        KC_Z,    KC_X,    KC_C,    OPT_V,   KC_B,    KC_N,    OPT_M,   KC_COMM, KC_DOT, KC_SLSH, \
                _L_PTR(KC_ESC), LWR_BSPC, _L_PTR(KC_TAB),    KC_ENT, RSE_SPC
 
-/** Convenience row shorthands. */
-#define _______________DEAD_HALF_ROW_______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define ______________HOME_ROW_GACS_L______________ XXXXXXX, KC_LSFT, KC_LCTL, KC_LGUI, XXXXXXX
-#define ______________HOME_ROW_GACS_R______________ XXXXXXX, KC_RGUI, KC_RCTL, KC_RSFT, XXXXXXX
-
 // clang-format off
 #define LAYOUT_LAYER_LOWER  \
     KC_1,    KC_2,    KC_3,    KC_4,    KC_5,               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,      \
@@ -125,6 +120,11 @@ static uint16_t auto_pointer_layer_timer = 0;
  * See https://github.com/manna-harbour/miryoku for the original layout.
  */
 
+
+/** Convenience row shorthands. */
+#define _______________DEAD_HALF_ROW_______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define ______________HOME_ROW_GACS_L______________ XXXXXXX, KC_LSFT, KC_LCTL, KC_LGUI, XXXXXXX
+#define ______________HOME_ROW_GACS_R______________ XXXXXXX, KC_RGUI, KC_RCTL, KC_RSFT, XXXXXXX
 /**
  * \brief Function layer.
  *
