@@ -71,6 +71,9 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define LWR_ESC LT(LAYER_LOWER, KC_ESC)
 #define RSE_ENT LT(LAYER_RAISE, KC_ENT)
 
+#define LWR_BSPC LT(LAYER_LOWER, KC_BSPC)
+#define RSE_SPC LT(LAYER_RAISE, KC_SPC)
+
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -85,7 +88,7 @@ static uint16_t auto_pointer_layer_timer = 0;
        KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P, \
        KC_A,    SFT_S,   CTL_D,   CMD_F,   KC_G,    KC_H,    CMD_J,   CTL_K,   SFT_L, KC_QUOT, \
        KC_Z,    KC_X,    KC_C,    OPT_V,   KC_B,    KC_N,    OPT_M,   KC_COMM, KC_DOT, KC_SLSH, \
-                       KC_TAB,  LWR_ESC,KC_BSPC,    KC_SPC,  RSE_ENT
+               _L_PTR(KC_ESC), LWR_BSPC, _L_PTR(KC_TAB),    KC_ENT, RSE_SPC
 
 /** Convenience row shorthands. */
 #define _______________DEAD_HALF_ROW_______________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
@@ -268,6 +271,9 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     switch (get_highest_layer(state)) {
     case LAYER_POINTER:
+        charybdis_set_pointer_dragscroll_enabled(false);
+        break;
+    case LAYER_LOWER:
         charybdis_set_pointer_dragscroll_enabled(false);
         break;
     default: //  for any other layers, or the default layer
